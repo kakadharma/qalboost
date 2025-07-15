@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Q-Checker</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="assets/img/komponen/favicon.png" rel="icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<!-- NavBar -->
+<body class="qchecker-page" onclick="resetMood(event)">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/komponen/logo.png" alt="QalBoost Logo">
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#statistik">Statistik</a></li>
+          <li><a href="index.html#artikel">Artikel</a></li>
+          <li><a href="#faq">F.A.Q</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <a class="btn-getstarted" href="qchecker.html#mood">Q-Checker</a>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Q-Checker -->
+    <section id="mood" class="section" data-aos="fade-up" style="margin-bottom: 17.8vh;">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2><span style="color: #004E89;"><br>Q-</span><span style="color: #FF6B35;">Checker</span></h2>
+          <p>Pilih mood kamu hari ini</p>
+        </div>
+
+        <!-- Mood -->
+        <div class="text-center">
+          <span class="mood-option" data-mood="good" onclick="setMoodActive(this, 'good', event)"></span>
+          <span class="mood-option" data-mood="bad" onclick="setMoodActive(this, 'bad', event)"></span>
+        </div>
+        <div id="mood-suboptions" class="text-center mt-4"></div>
+
+        <!-- Nasihat -->
+        <div id="response-section" class="response-section">
+          <h4 class="text-center"><br>Pilih jenis nasihat:</h4>
+          <div class="text-center mt-3 d-flex flex-column align-items-center gap-2">
+
+            <!-- Qur'an -->
+            <div class="response-option">
+              <div class="bubble-option" onclick="toggleDropdown('quran')">
+                <div class="dropdown-content-icon">
+                  <img src="assets/img/nasihat/quran.png" alt="Quran Icon">
+                  <span>Potongan Al-Qur'an</span>
+                </div>
+              </div>
+              <div id="quran" class="dropdown-content">
+                <div class="close-btn" onclick="toggleDropdown('quran')">▲</div>
+                <div class="dropdown-inner"></div>
+              </div>
+            </div>
+
+            <!-- Hadits -->
+            <div class="response-option">
+              <div class="bubble-option" onclick="toggleDropdown('hadits')">
+                <div class="dropdown-content-icon">
+                  <img src="assets/img/nasihat/hadits.png" alt="Hadits Icon">
+                  <span>Potongan Hadits</span>
+                </div>
+              </div>
+              <div id="hadits" class="dropdown-content">
+                <div class="close-btn" onclick="toggleDropdown('hadits')">▲</div>
+                <div class="dropdown-inner"></div>
+              </div>
+            </div>
+
+            <!-- Quotes-Ustad -->
+            <div class="response-option">
+              <div class="bubble-option" onclick="toggleDropdown('quotes')">
+                <div class="dropdown-content-icon">
+                  <img src="assets/img/nasihat/ustad.png" alt="Ustadz Icon">
+                  <span>Quotes Ustadz</span>
+                </div>
+              </div>
+              <div id="quotes" class="dropdown-content">
+                <div class="close-btn" onclick="toggleDropdown('quotes')">▲</div>
+                <div class="dropdown-inner">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faq -->
+    <section id="faq" class="faq section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Beberapa pertanyaan umum yang mungkin ditanyakan:</p>
+      </div>
+
+      <!-- Faq-1 -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="faq-container">
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Apa itu Platform QalBoost?</h3>
+                <div class="faq-content">
+                  <p style="text-align: justify;">Qalboost adalah platform refleksi digital yang membantu pengguna mengenali suasana hati dan memberikan respons berupa nasihat Islami seperti ayat, hadist, atau kutipan bijak. Dengan pendekatan yang sederhana dan interaktif, Qalboost hadir sebagai teman harian untuk menjaga ketenangan hati dan memperkuat iman, khususnya di kalangan Gen Z.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- Faq-2 -->
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Apa yang melatarbelakangi terciptanya QalBoost?</h3>
+                <div class="faq-content">
+                  <p style="text-align: justify;">Banyak anak muda mengalami perubahan suasana hati yang cepat, cemas berlebihan, dan sulit menenangkan diri karena kesehatan mental yang terganggu. Namun, tidak semua punya tempat nyaman untuk mencurahkan perasaan atau berbicara kepada orang lain tentang perasaannya. Qalboost dibangun karena kami percaya bahwa setiap emosi layak dipahami dan dalam Islam, tiap rasa punya tempat dan nasihatnya. Inilah cara kami menghubungkan emotional awareness dengan nilai-nilai Islami secara praktis.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- Faq-3 -->
+               <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Tentang penggunaan Q-checker?</h3>
+                <div class="faq-content">
+                  <p style="text-align: justify;">Q-Checker mudah digunakan. Pengguna cukup menjawab beberapa pertanyaan singkat tentang perasaan dan kondisi mental mereka saat ini. Hasilnya akan menunjukkan status emosi, seperti tenang, cemas, atau stres ringan, disertai dengan pengingat Islami berupa ayat Al-Qur’an, hadis, atau nasihat yang menenangkan. Fitur ini dirancang agar pengguna bisa lebih memahami dirinya sekaligus mendapatkan ketenangan melalui nilai-nilai keislaman.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- Faq-4 -->
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Fitur apa saja yang tersedia di QalBoost?</h3>
+                <div class="faq-content">
+                  <p style="text-align: justify;">QalBoost memiliki beberapa fitur utama. Pertama, Q-Checker yang membantu pengguna mengenali kondisi emosinya, seperti stres atau kecemasan, lalu memberikan hasil disertai pengingat Islami untuk menenangkan hati. Kedua, fitur Statistik Emosi Gen Z yang menampilkan data visual kolektif dari pengguna, sehingga membantu membangun kesadaran diri tentang pola emosi. Selain itu, QalBoost juga menyajikan artikel Islami yang relevan dengan isu mental Gen Z—berisi topik seperti menghadapi tekanan, pentingnya sabar dan syukur, serta doa-doa penyejuk hati dengan bahasa yang ringan dan bermakna.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <!-- Faq-5 -->
+              <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Siapa yang dapat menggunakan platform ini?</h3>
+                <div class="faq-content">
+                  <p style="text-align: justify;">Qalboost ditujukan untuk Gen Z Muslim yang ingin menemukan ketenangan di tengah hiruk-pikuk kehidupan, maupun siapa saja yang ingin memahami emosinya lewat pendekatan Islami yang ringan dan bermakna. Cocok bagi mereka yang sedang dalam proses hijrah, belajar sabar, atau hanya butuh ruang untuk mendekat kepada Allah dengan cara yang sederhana. Selama ada niat untuk mengenal diri dan memperbaiki hati, Qalboost hadir sebagai teman setia dalam perjalanan itu.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section style="background-color: #1A659E; padding: 1px;">
+  <div class="container copyright text-center mt-4">
+    <p style="color: white; font-style: oblique;">
+      © <span style="color: white; font-style: oblique;">Copyright</span>
+      <strong class="px-1 sitename" style="color: white; font-style: oblique;">QalBoost - KD2</strong>
+    </p>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 2px; color: white;">
+      <img src="assets/img/komponen/uinsu.png" width="40" height="40" alt="uinsu"
+     style="margin-bottom: 10px; filter: drop-shadow(0 0 4px white) drop-shadow(0 0 8px white);">
+      <span>Universitas Islam Negeri Sumatra Utara Medan 2025</span>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Scroll-Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Loading-Screen -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

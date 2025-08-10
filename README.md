@@ -1,13 +1,13 @@
-# Qalboost: Mood Checker Islami
+# Qalboost: Mood Checker Islami (Prototype)
 
 **Kategori:** Islamic Apps/Web & Edutech Learning
 
 **Tim:** KD2 | **Universitas Islam Negeri Sumatera Utara Medan**
 
 **Anggota:** 3 Orang
-- Kaka Davi Dharmawan
-- Dodyk Fahlome
-- Dea Alya
+- Kaka Davi Dharmawan (System Analyst + Front End Dev Involment)
+- Dodyk Fahlome (Front End Developer + Product Designer)
+- Dea Alya (UI/UX Designer)
 
 ---
 
